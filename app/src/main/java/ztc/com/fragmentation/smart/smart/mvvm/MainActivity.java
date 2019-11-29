@@ -20,7 +20,6 @@ import ztc.com.fragmentation.smart.smart.mvvm.dtos.BannerVO;
 import ztc.com.fragmentation.smart.smart.mvvm.lifecycle.SmartLifeCycleObserver;
 import ztc.com.fragmentation.smart.smart.mvvm.net.LcopApi;
 import ztc.com.fragmentation.smart.smart.mvvm.net.LcopNetFactory;
-import ztc.com.fragmentation.smart.smart.mvvm.viewmodel.BannerViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         getLifecycle().addObserver(new SmartLifeCycleObserver());
 
-        BannerViewModel bannerViewModel = ViewModelProviders.of(this).get(BannerViewModel.class);
-        bannerViewModel.getBannerData()
-                .observe(this, bannerResponse -> {
-                    if (ObjectUtils.isNotEmpty(bannerResponse)) {
-                        mBinding.tvBannerUrl.setText(bannerResponse.getImgUrl());
-                    }
-                });
-
-        mBinding.btnSubmit.setOnClickListener(view -> {
-            BannerVO bannerResponse = new BannerVO();
-            bannerResponse.setImgUrl("http://www.baidu.com");
-            bannerViewModel.getBannerData().setValue(bannerResponse);
-        });
+//        BannerViewModel bannerViewModel = ViewModelProviders.of(this).get(BannerViewModel.class);
+//        bannerViewModel.getBannerData()
+//                .observe(this, bannerResponse -> {
+//                    if (ObjectUtils.isNotEmpty(bannerResponse)) {
+//                        mBinding.tvBannerUrl.setText(bannerResponse.getImgUrl());
+//                    }
+//                });
+//
+//        mBinding.btnSubmit.setOnClickListener(view -> {
+//            BannerVO bannerResponse = new BannerVO();
+//            bannerResponse.setImgUrl("http://www.baidu.com");
+//            bannerViewModel.getBannerData().setValue(bannerResponse);
+//        });
 
 
         getBanner();
