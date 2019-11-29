@@ -1,13 +1,11 @@
 package ztc.com.fragmentation.smart.smart.mvvm;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.blankj.utilcode.util.ObjectUtils;
 import com.orhanobut.logger.Logger;
@@ -36,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         getLifecycle().addObserver(new SmartLifeCycleObserver());
 
         BannerViewModel bannerViewModel = ViewModelProviders.of(this).get(BannerViewModel.class);
-        MutableLiveData<BannerVO> bannerData = bannerViewModel.getBannerData();
-        bannerData.observe(this, bannerResponse -> {
-            if (ObjectUtils.isNotEmpty(bannerResponse)) {
-                mBinding.tvBannerUrl.setText(bannerResponse.getImgUrl());
-            }
-        });
+        bannerViewModel.getBannerData()
+                .observe(this, bannerResponse -> {
+                    if (ObjectUtils.isNotEmpty(bannerResponse)) {
+                        mBinding.tvBannerUrl.setText(bannerResponse.getImgUrl());
+                    }
+                });
 
         mBinding.btnSubmit.setOnClickListener(view -> {
             BannerVO bannerResponse = new BannerVO();

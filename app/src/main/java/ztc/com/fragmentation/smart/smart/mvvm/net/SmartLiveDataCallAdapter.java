@@ -1,6 +1,7 @@
 package ztc.com.fragmentation.smart.smart.mvvm.net;
 
-import android.arch.lifecycle.LiveData;
+
+import androidx.lifecycle.LiveData;
 
 import com.blankj.utilcode.util.StringUtils;
 

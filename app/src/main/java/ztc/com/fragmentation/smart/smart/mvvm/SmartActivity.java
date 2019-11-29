@@ -1,11 +1,12 @@
 package ztc.com.fragmentation.smart.smart.mvvm;
 
 import android.app.Activity;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.LifecycleRegistry;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LifecycleRegistry;
 
 import ztc.com.fragmentation.smart.smart.mvvm.lifecycle.SmartLifeCycleObserver;
 

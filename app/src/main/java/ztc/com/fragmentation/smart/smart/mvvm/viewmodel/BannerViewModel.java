@@ -1,7 +1,7 @@
 package ztc.com.fragmentation.smart.smart.mvvm.viewmodel;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import ztc.com.fragmentation.smart.smart.mvvm.dtos.BannerVO;
 
