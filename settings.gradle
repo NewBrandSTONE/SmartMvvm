@@ -1,1 +1,1 @@
-include ':app', ':lib_actionbar'
+include ':app', ':lib_actionbar', ':lib_lottery_core', ':lib_net'
