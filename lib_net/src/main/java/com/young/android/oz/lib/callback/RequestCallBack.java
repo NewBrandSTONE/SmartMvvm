@@ -1,4 +1,4 @@
-package com.young.android.oz.lib.net;
+package com.young.android.oz.lib.callback;
 
 /**
  * 定义请求回调方法

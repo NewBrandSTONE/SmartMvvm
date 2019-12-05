@@ -1,7 +1,7 @@
 package com.young.android.oz.lib.lottery.core.base;
 
 /**
- * 定义基础的消息驱动类
+ * 定义基础的消息驱动类,事件由Model层向View层发送。
  *
  * @author O.z Young
  * @version 2019-12-01
